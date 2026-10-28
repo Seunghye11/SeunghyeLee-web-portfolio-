@@ -6,7 +6,7 @@ const projects = [
         category: "branding",
         type: "Brand Identitiy · Character",
         image: "img/branding-01.jpg",
-        link: "Branding/Jonticky.html"
+        link: "Branding/jonticky.html"
     },
     {
         title: "The Cupstates",
