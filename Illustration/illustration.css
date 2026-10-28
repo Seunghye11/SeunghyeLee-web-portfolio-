@@ -1,0 +1,122 @@
+/* Illustration Page */
+.illustration-page {
+    width: calc(100% - 48px);
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Navigation */
+
+.detail-nav {
+    width: calc(100% - 200px);
+    margin: 60px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-nav-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 6px 15px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+
+    border: 1.5px solid transparent;
+    border-radius: 999px;
+
+    font-family: "Favorit Mono", monospace;
+    font-size: 0.9rem;
+    line-height: 1.2;
+
+    color: #111;
+    text-decoration: none;
+
+    transition: border-color 0.2s ease;
+}
+
+.detail-nav-btn:hover {
+    border-color: #111;
+}
+
+/* Masonry Grid */
+
+.illustration-grid {
+    position: relative;
+
+    width: calc(100% - 200px);
+    margin: 0 auto;
+}
+
+/* Illustration Item */
+
+.illustration-item {
+    position: absolute;
+
+    width: calc((100% - 48px) / 4);
+}
+
+.illustration-item img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+/* Hover Tooltip */
+
+.illustration-tooltip {
+    position: fixed;
+
+    width: fit-content;
+    max-width: 360px;
+    padding: 10px 12px;
+
+    background: #fff;
+    border: 1px solid #111;
+
+    font-family: "Favorit Mono", "Noto Sans KR", monospace;
+
+    font-size: 12px;
+    line-height: 1.4;
+    word-break: keep-all;
+
+    pointer-events: none;
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 100;
+
+    transition: opacity 0.15s ease, visibility 0.15s ease;
+}
+
+.illustration-tooltip strong {
+    display: block;
+    font-weight: 500;
+}
+
+.illustration-tooltip span {
+    display: block;
+    margin-top: 3px;
+}
+
+/* footer */
+.footer {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 0 30px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    font-family: "Favorit Mono", "Noto Sans KR", monospace;
+    font-size: 0.8rem;
+    line-height: 1.3;
+}
+
+
