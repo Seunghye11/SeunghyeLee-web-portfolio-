@@ -134,19 +134,23 @@ function setCategory(filter) {
 
 categoryButtons.forEach(button => {
     button.addEventListener("click", () => {
-        setCategory(button.dataset.filter);
+        const filter = button.dataset.filter;
+        sessionStorage.setItem("selectedCategory", filter);
+        setCategory(filter);
     });
 });
 
 
-/* INITIAL CATEGORY FROM URL */
+/* INITIAL CATEGORY */
 
-const params = new URLSearchParams(window.location.search);
-const filterFromURL = params.get("filter");
+const navigationEntry = performance.getEntriesByType("navigation")[0];
+const isBackForward = navigationEntry?.type === "back_forward";
 
-if (["branding", "illustration", "web"].includes(filterFromURL)) {
-    setCategory(filterFromURL);
+if (isBackForward) {
+    const savedFilter = sessionStorage.getItem("selectedCategory") || "all";
+    setCategory(savedFilter);
 } else {
+    sessionStorage.removeItem("selectedCategory");
     setCategory("all");
 }
 
